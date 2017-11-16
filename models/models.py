@@ -7,7 +7,8 @@ def create_model(opt):
         from .cycle_gan_model import CycleGANModel
         model = CycleGANModel()
     elif opt.model == 'pix2pix':
-        assert(opt.dataset_mode == 'aligned')
+        assert (opt.dataset_mode == 'v')
+        #assert(opt.dataset_mode == 'aligned')
         from .pix2pix_model import Pix2PixModel
         model = Pix2PixModel()
     elif opt.model == 'test':
